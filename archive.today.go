@@ -21,7 +21,7 @@ import (
 )
 
 func commit(target string) string {
-	resp, err := http.PostForm("https://archive.today/?run=1&url=",
+	resp, err := http.PostForm("https://archive.today/submit/",
 		url.Values{"url": {target}})
 	if err != nil {
 		log.Fatal("Error doing a POST:", err)
